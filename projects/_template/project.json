@@ -1,0 +1,12 @@
+{
+  "projectId": "example-project",
+  "title": "Example Project",
+  "stemPrefix": "example_project",
+  "inputFormat": "wav",
+  "inputSampleRateHz": 48000,
+  "inputBitDepth": 24,
+  "stems": ["base", "tension", "chase", "texture"],
+  "sessionEntry": "sessions/main.tidal",
+  "notesEntry": "notes/direction.md",
+  "clients": []
+}

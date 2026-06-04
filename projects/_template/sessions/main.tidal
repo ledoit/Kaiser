@@ -1,0 +1,9 @@
+-- Kaiser template session
+-- Replace patterns with project-specific material.
+
+setcps 0.8
+
+d1 $ s "bd ~ bd ~"
+
+-- hush
+

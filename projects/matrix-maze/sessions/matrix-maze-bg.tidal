@@ -1,0 +1,95 @@
+-- Kaiser / Matrix-Maze
+-- TidalCycles sketch: thriller DnB (minimal, tense, game-safe)
+-- Suggested cps start: 0.82 - 0.9
+
+setcps 0.86
+
+-- stop all channels:
+-- hush
+
+-------------------------------------------------
+-- Base Loop (run this most of the time)
+-------------------------------------------------
+
+d1
+  $ stack
+  [ s "bd*2 [~ bd] bd*2 [~ bd]"
+  , s "~ sn:2 ~ [~ sn:2]"
+  ]
+  # gain 1
+  # room 0.08
+  # size 0.2
+
+d2
+  $ s "[~ lt] ~ [lt ~] [~ cp]"
+  # gain 0.5
+  # shape 0.18
+  # speed 0.9
+
+d3
+  $ n "0 ~ [0 0] ~"
+  # s "bass3"
+  # legato 0.85
+  # sustain 0.22
+  # gain 0.8
+  # lpf 950
+  # resonance 0.25
+
+d4
+  $ every 6 (rev)
+  $ slow 2
+  $ s "[~ ~ industrial:3] ~"
+  # gain 0.2
+  # hpf 600
+  # room 0.3
+  # size 0.5
+
+-------------------------------------------------
+-- Variation A: hi-hat pressure (8 cycles)
+-- Activate during rising tension, then mute d5.
+-------------------------------------------------
+
+d5
+  $ every 4 (jux (iter 2))
+  $ s "hc*8"
+  # gain 0.32
+  # hpf 4200
+  # speed "1 1.02 0.98 1.01"
+
+-------------------------------------------------
+-- Variation B: chase pulse (8-16 cycles)
+-- Adds urgency with denser break texture.
+-------------------------------------------------
+
+d6
+  $ every 3 (stut 3 0.125 0.9)
+  $ s "amencutup*2"
+  # gain 0.42
+  # cut 1
+  # hpf 180
+  # lpf 4200
+
+-------------------------------------------------
+-- Variation C: dread stabs (4-8 cycles, sparse use)
+-------------------------------------------------
+
+d7
+  $ n "<[0 3] [~ 5] [7 ~] [3 10]>"
+  # s "supersaw"
+  # gain 0.22
+  # sustain 0.15
+  # crush 2
+  # lpf 1300
+  # room 0.35
+  # size 0.6
+
+-------------------------------------------------
+-- Cooldown (drop back after chase)
+-------------------------------------------------
+
+-- silence extra layers:
+-- silence d5
+-- silence d6
+-- silence d7
+-- keep d1-d4 for stable gameplay bed
+

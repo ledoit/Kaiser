@@ -1,0 +1,20 @@
+{
+  "projectId": "matrix-maze",
+  "title": "Matrix Maze",
+  "stemPrefix": "matrix_maze",
+  "inputFormat": "wav",
+  "inputSampleRateHz": 48000,
+  "inputBitDepth": 24,
+  "stems": ["base", "pressure", "chase", "dread"],
+  "sessionEntry": "sessions/matrix-maze-bg.tidal",
+  "notesEntry": "notes/matrix-maze-direction.md",
+  "clients": [
+    {
+      "id": "matrix-maze-app",
+      "description": "Web/Tauri game (Vite app under Menhir Games)",
+      "syncScript": "Games/Matrix-Maze/app/scripts/sync-music-from-kaiser.js",
+      "syncCommand": "npm run music:sync",
+      "syncWorkingDirectory": "Games/Matrix-Maze/app"
+    }
+  ]
+}
