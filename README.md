@@ -100,3 +100,8 @@ Start Matrix Maze and click the viewport once to unlock audio.
 2. Add `sessions/` and `notes/` as needed.
 3. In the **client** repository, add something like `scripts/sync-music-from-kaiser.js` (copy from Matrix Maze and adjust `--project` default or npm script).
 4. Register the client in Kaiser `project.json` → `clients` (paths relative to Menhir repo root for documentation).
+
+
+## License
+
+All Rights Reserved © Menhir Holdings
