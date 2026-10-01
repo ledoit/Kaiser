@@ -11,7 +11,7 @@
   "clients": [
     {
       "id": "matrix-maze-app",
-      "description": "Web/Tauri game (Vite app under Menhir Games)",
+      "description": "Web/Tauri game",
       "syncScript": "Games/Matrix-Maze/app/scripts/sync-music-from-kaiser.js",
       "syncCommand": "npm run music:sync",
       "syncWorkingDirectory": "Games/Matrix-Maze/app"
